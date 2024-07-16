@@ -10,7 +10,7 @@ dynamic = ["version"]
 # version is defined with `setuptools_scm`. See `SConstruct` file.
 
 [project.urls]
-Repository = "https://github.com/richardkiss/chik_base.git"
+Repository = "https://github.com/Chik-Network/chik_base.git"
 
 [project.optional-dependencies]
 dev = ["ruff>=0.0.252", "black>=23.1.0", "pytest>=7.2.1"]
