@@ -1,1 +1,1 @@
-chia_base: base data types for chia coins, spends and contract development
+chik_base: base data types for chik coins, spends and contract development

@@ -5,12 +5,12 @@ import io
 
 import pytest
 
-from clvm_rs import Program  # type: ignore
+from klvm_rs import Program  # type: ignore
 
-from chia_base.atoms.ints import int8, int16, uint16, int32, int64, uint64
-from chia_base.atoms.sized_bytes import bytes32
-from chia_base.bls12_381 import BLSSecretExponent
-from chia_base.cbincode import (
+from chik_base.atoms.ints import int8, int16, uint16, int32, int64, uint64
+from chik_base.atoms.sized_bytes import bytes32
+from chik_base.bls12_381 import BLSSecretExponent
+from chik_base.cbincode import (
     from_bytes,
     from_hex,
     make_parser,
@@ -18,7 +18,7 @@ from chia_base.cbincode import (
     to_bytes,
     to_hex,
 )
-from chia_base.meta.typing import GenericAlias
+from chik_base.meta.typing import GenericAlias
 
 
 @dataclass

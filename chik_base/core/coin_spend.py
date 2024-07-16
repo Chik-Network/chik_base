@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from clvm_rs import Program  # type: ignore
+from klvm_rs import Program  # type: ignore
 
 
 from .coin import Coin
@@ -9,7 +9,7 @@ from .coin import Coin
 @dataclass(frozen=True)
 class CoinSpend:
     """
-    This represents a coin spend on the chia blockchain.
+    This represents a coin spend on the chik blockchain.
     """
 
     coin: Coin

@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List
 
-from chia_base.bls12_381.bls_signature import BLSSignature
+from chik_base.bls12_381.bls_signature import BLSSignature
 
 from .coin_spend import CoinSpend
 

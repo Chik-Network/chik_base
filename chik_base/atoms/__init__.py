@@ -5,7 +5,7 @@ data structures.
 Except for `hexbytes` (which is just a hex-printing subclass of `bytes`,
 these types are all fixed-sized, simplifying serializing and parsing, like
 those used in `cbincode` (the slight modification to the `bincode` standard that
-chia uses).
+chik uses).
 """
 
 from .hexbytes import hexbytes

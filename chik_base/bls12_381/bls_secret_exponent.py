@@ -1,8 +1,8 @@
 from typing import BinaryIO, List, Optional
 
-import chia_rs  # type: ignore
+import chik_rs  # type: ignore
 
-from chia_base.util.bech32 import bech32_decode, bech32_encode, Encoding
+from chik_base.util.bech32 import bech32_decode, bech32_encode, Encoding
 
 from .bls_public_key import BLSPublicKey
 from .bls_signature import BLSSignature
@@ -20,7 +20,7 @@ class BLSSecretExponent:
     `__bytes__` which could cause confusion.
     """
 
-    def __init__(self, sk: chia_rs.PrivateKey):
+    def __init__(self, sk: chik_rs.PrivateKey):
         self._sk = sk
 
     @classmethod
@@ -29,7 +29,7 @@ class BLSSecretExponent:
         convert from a seed using the specification at
         https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-bls-signature-05
         """
-        return BLSSecretExponent(chia_rs.AugSchemeMPL.key_gen(seed))
+        return BLSSecretExponent(chik_rs.AugSchemeMPL.key_gen(seed))
 
     @classmethod
     def from_int(cls, secret_exponent) -> "BLSSecretExponent":
@@ -39,7 +39,7 @@ class BLSSecretExponent:
     @classmethod
     def from_bytes(cls, blob) -> "BLSSecretExponent":
         "deserialize from the given blob. A blob of length 32 bytes is expected"
-        return cls(chia_rs.PrivateKey.from_bytes(blob))
+        return cls(chik_rs.PrivateKey.from_bytes(blob))
 
     @classmethod
     def parse(cls, f: BinaryIO):
@@ -60,9 +60,9 @@ class BLSSecretExponent:
         "generate a signature"
         if final_public_key:
             return BLSSignature(
-                chia_rs.AugSchemeMPL.sign(self._sk, message, final_public_key._g1)
+                chik_rs.AugSchemeMPL.sign(self._sk, message, final_public_key._g1)
             )
-        return BLSSignature(chia_rs.AugSchemeMPL.sign(self._sk, message))
+        return BLSSignature(chik_rs.AugSchemeMPL.sign(self._sk, message))
 
     def public_key(self) -> BLSPublicKey:
         "return the corresponding public key"
@@ -74,12 +74,12 @@ class BLSSecretExponent:
 
     def hardened_child(self, index: int) -> "BLSSecretExponent":
         "return the hardened child"
-        return BLSSecretExponent(chia_rs.AugSchemeMPL.derive_child_sk(self._sk, index))
+        return BLSSecretExponent(chik_rs.AugSchemeMPL.derive_child_sk(self._sk, index))
 
     def child(self, index: int) -> "BLSSecretExponent":
         "return the unhardened child. This will match the corresponding public_key child"
         return BLSSecretExponent(
-            chia_rs.AugSchemeMPL.derive_child_sk_unhardened(self._sk, index)
+            chik_rs.AugSchemeMPL.derive_child_sk_unhardened(self._sk, index)
         )
 
     def child_for_path(self, path: List[int]) -> "BLSSecretExponent":

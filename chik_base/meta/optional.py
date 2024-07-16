@@ -1,6 +1,6 @@
 from typing import Union, Type
 
-from chia_base.meta.type_tree import ArgsType
+from chik_base.meta.type_tree import ArgsType
 
 
 def optional_from_union(args: ArgsType) -> Union[Type, None]:

@@ -1,11 +1,11 @@
 from dataclasses import dataclass
 
-from clvm_rs import Program  # type: ignore
+from klvm_rs import Program  # type: ignore
 
-from chia_base.atoms.ints import uint64
-from chia_base.atoms.sized_bytes import bytes32
+from chik_base.atoms.ints import uint64
+from chik_base.atoms.sized_bytes import bytes32
 
-from chia_base.util.std_hash import std_hash
+from chik_base.util.std_hash import std_hash
 
 
 @dataclass(frozen=True)

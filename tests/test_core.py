@@ -4,16 +4,16 @@ import io
 
 import pytest
 
-from clvm_rs import Program  # type: ignore
+from klvm_rs import Program  # type: ignore
 
-from chia_base.atoms import bytes32, hexbytes
-from chia_base.bls12_381.bls_signature import BLSSignature
-from chia_base.core import Coin, CoinSpend, SpendBundle
-from chia_base.core import conlang
-from chia_base.util.std_hash import std_hash
+from chik_base.atoms import bytes32, hexbytes
+from chik_base.bls12_381.bls_signature import BLSSignature
+from chik_base.core import Coin, CoinSpend, SpendBundle
+from chik_base.core import conlang
+from chik_base.util.std_hash import std_hash
 
 
-from chia_base.cbincode import (
+from chik_base.cbincode import (
     make_parser,
     make_streamer,
 )

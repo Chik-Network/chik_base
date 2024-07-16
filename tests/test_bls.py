@@ -4,7 +4,7 @@ import io
 
 import pytest
 
-from chia_base.bls12_381 import BLSPublicKey, BLSSecretExponent, BLSSignature
+from chik_base.bls12_381 import BLSPublicKey, BLSSecretExponent, BLSSignature
 
 
 def try_stuff(g):

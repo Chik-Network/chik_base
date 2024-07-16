@@ -1,6 +1,6 @@
 import hashlib
 
-from chia_base.atoms import bytes32
+from chik_base.atoms import bytes32
 
 
 def std_hash(*args: bytes) -> bytes32:

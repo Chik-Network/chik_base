@@ -24,11 +24,11 @@ from typing import (
 )
 
 
-from chia_base.atoms import uint32
+from chik_base.atoms import uint32
 
-from chia_base.meta.optional import optional_from_union
-from chia_base.meta.type_tree import TypeTree, OriginArgsType, ArgsType, Gtype
-from chia_base.meta.typing import UnionType
+from chik_base.meta.optional import optional_from_union
+from chik_base.meta.type_tree import TypeTree, OriginArgsType, ArgsType, Gtype
+from chik_base.meta.typing import UnionType
 
 
 _T = TypeVar("_T")
