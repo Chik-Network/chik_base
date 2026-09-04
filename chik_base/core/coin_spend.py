@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from klvm_rs import Program  # type: ignore
+from clvk_rs import Program  # type: ignore
 
 
 from .coin import Coin

@@ -25,7 +25,7 @@ from typing import (
     Union,
 )
 
-from klvm_rs import Program  # type: ignore
+from clvk_rs import Program  # type: ignore
 
 from chik_base.atoms import uint32
 from chik_base.meta.optional import optional_from_union

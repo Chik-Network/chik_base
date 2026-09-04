@@ -4,7 +4,7 @@ import io
 
 import pytest
 
-from klvm_rs import Program  # type: ignore
+from clvk_rs import Program  # type: ignore
 
 from chik_base.atoms import bytes32, hexbytes
 from chik_base.bls12_381.bls_signature import BLSSignature

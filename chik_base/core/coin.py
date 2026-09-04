@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from klvm_rs import Program  # type: ignore
+from clvk_rs import Program  # type: ignore
 
 from chik_base.atoms.ints import uint64
 from chik_base.atoms.sized_bytes import bytes32

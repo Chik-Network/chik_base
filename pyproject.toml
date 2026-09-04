@@ -4,7 +4,7 @@ description = "Common types and simple utilities used through chik code base"
 authors = [{ name = "Richard Kiss", email = "him@richardkiss.com" }]
 license = { text = "Apache-2.0" }
 readme = "README.md"
-dependencies = ["klvm_rs==0.2.5", "chik_rs>=0.5.2"]
+dependencies = ["clvk_rs==0.2.5", "chik_rs>=0.5.2"]
 version = "0.1.7"
 
 # version is defined with `setuptools_scm`. See `SConstruct` file.
